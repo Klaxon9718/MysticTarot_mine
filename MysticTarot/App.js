@@ -16,6 +16,7 @@ import Setting from './pages/main/Setting';
 import SelectSpread from './pages/tarot/SelectSpread';
 import SelectCard from './pages/tarot/SelectCard';
 import Thumbnail from './pages/main/Thumbnail';
+import Result from './pages/record/Result';
 
 
 function HomeScreen() {
@@ -27,6 +28,8 @@ function HomeScreen() {
 }
 
 const Stack = createStackNavigator();
+//네비게이션을 context로 변환할 필요가 있음
+
 
 export default function App() {
 	return (
@@ -36,11 +39,15 @@ export default function App() {
 				<Stack.Screen name="TestPage" component={TestPage} />
 
 				<Stack.Screen name="Home" component={Home} />
+				
 				<Stack.Screen name="Thumbnail" component={Thumbnail} />
+
 				<Stack.Screen name="Store" component={Store} />
 				<Stack.Screen name="Setting" component={Setting} />
 				<Stack.Screen name="SelectSpread" component={SelectSpread} />
 				<Stack.Screen name="SelectCard" component={SelectCard} />
+
+				<Stack.Screen name="Result" component={Result} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	);

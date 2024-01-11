@@ -5,7 +5,7 @@ import { StyleSheet, View, Button, Text, ScrollView, FlatList } from "react-nati
 //import { NavigationContainer } from "@react-navigation/native";
 //import { createStackNavigator } from "@react-navigation/stack";
 
-import pageList from "../systems/PageList";
+import pageList, { PageBackButton } from "../systems/PageList";
 
 
 export default function Home({ navigation }) {
@@ -19,6 +19,8 @@ export default function Home({ navigation }) {
 
 	return (
 		<>
+			<PageBackButton 
+				navigation={navigation}/>
 			<FlatList
 				data={pageList}
 				renderItem={renderItem}

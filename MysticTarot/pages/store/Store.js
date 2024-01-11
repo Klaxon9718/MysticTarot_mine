@@ -5,8 +5,11 @@ import { Text, View, Button } from 'react-native';
 //import Container from "../component/Container";
 
 // files
+import { PageChangeButton, pageNames } from '../../systems/PageList';
 
-export default function Store({ navigation }) {
+//useContext();
+
+export default function Base({navigation}) {
 	return (
 		<View>
 			<Text>Store</Text>
