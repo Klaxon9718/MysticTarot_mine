@@ -7,6 +7,8 @@ export default function DragComponent({
   dropZoneWidth,
   windowWidth,
   windowHeight,
+  greenZone,
+  onDragRelease,
   card,
 }) {
   const onDragReleaseHandler = (event, gesture, component) => {
