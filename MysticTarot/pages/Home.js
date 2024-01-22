@@ -1,40 +1,35 @@
 // pages/Home.js
 import React, { useCallback } from "react";
-import {
-  StyleSheet,
-  View,
-  Button,
-  Text,
-  ScrollView,
-  FlatList,
-} from "react-native";
+import { StyleSheet, View, Button, Text, ScrollView, FlatList } from "react-native";
 
 //import { NavigationContainer } from "@react-navigation/native";
 //import { createStackNavigator } from "@react-navigation/stack";
 
 import pageList, { PageBackButton } from "../systems/PageList";
 
-export default function Home({ navigation }) {
-  const renderItem = useCallback(({ item }) => {
-    return (
-      <Button
-        title={item.title}
-        onPress={() => navigation.navigate(item.link)}
-      />
-    );
-  });
 
-  return (
-    <>
-      <PageBackButton navigation={navigation} />
-      <FlatList
-        data={pageList}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.key}
-      />
-    </>
-  );
+export default function Home({ navigation }) {
+
+	const renderItem = useCallback(({ item }) => {
+		return <Button
+			title={item.title}
+			onPress={() => navigation.navigate(item.link)}
+		/>
+	});
+
+	return (
+		<>
+			<PageBackButton 
+				navigation={navigation}/>
+			<FlatList
+				data={pageList}
+				renderItem={renderItem}
+				keyExtractor={item => item.key}
+			/>
+		</>
+	)
 }
+
 
 /*
 	BackHandler.addEventListener('hardwareBackPress', () => {
