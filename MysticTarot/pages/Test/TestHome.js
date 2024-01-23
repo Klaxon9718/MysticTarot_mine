@@ -1,10 +1,12 @@
 import React, { useCallback } from "react";
 import { StyleSheet, View, Button, Text, ScrollView, FlatList } from "react-native";
+import { useNavigation } from '@react-navigation/native';
 
-import { pageNames, pageList, PageChangeButton } from "../../systems/PageList";
+import {allPageList, pageNames} from "../../systems/Page";
+import * as PageModule from "../../modules/PageModule";
 
-export default function TestHome({ navigation }) {
-
+export default function TestHome() {
+	const navigation = useNavigation();
 	const renderItem = useCallback(({ item }) => {
 		return <Button
 			title={item.title}
@@ -15,21 +17,19 @@ export default function TestHome({ navigation }) {
 	//console.log('flatList function');
 	return (
 		<>
-			<PageChangeButton
-				navigation={navigation}
+			<PageModule.PageChangeButton
+				title={'테스트 페이지'}
+				name={'TestPage'}
+			/>
+			<PageModule.PageChangeButton
 				title={'실 동작테스트'}
 				name={pageNames.Thumbnail.name}
 			/>
-			<PageChangeButton
-				navigation={navigation}
+			<PageModule.PageChangeButton
 				name={pageNames.Home.name}
 			/>
-			<Button
-				title="실 동작 테스트"
-				onPress={() => navigation.navigate(pageNames.Thumbnail.name)}
-			/>
 			<FlatList
-				data={pageList}
+				data={allPageList}
 				renderItem={renderItem}
 				keyExtractor={item => item.key}
 			/>

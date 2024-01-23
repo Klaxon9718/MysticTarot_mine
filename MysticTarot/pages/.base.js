@@ -2,15 +2,18 @@
 // system
 import * as React from 'react';
 import { Text, View, Button } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 //import Container from "../component/Container";
 
-import { PageChangeButton, pageNames } from '../../systems/PageList';
-
 // files
+import {pageList, pageNames} from "../../systems/Page";
+import * as PageModule from "../../systems/PageModule";
 
 //useContext();
 
-export default function Base({navigation}) {
+export default function Base() {
+	const navigation = useNavigation();
+
 	return (
 		<View>
 			<Text></Text>
