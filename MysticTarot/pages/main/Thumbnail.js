@@ -3,7 +3,7 @@ import * as React from 'react';
 import { Text, View, Button } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-import {pageNames} from "../../systems/Page";
+import { pageNames } from "../../systems/Page";
 import * as PageModule from "../../modules/PageModule";
 
 export default function Thumbnail() {
