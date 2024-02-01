@@ -43,6 +43,13 @@ export const PageBackButton = (props) => {
 	/>)
 }
 
+/**
+ * 
+ * @param {*} props 
+ * @returns 
+ * @detail 홈으로 이동하는 버튼 
+ */
+
 export const HomeButton = (props) => {
 	const navigation = useNavigation();
 

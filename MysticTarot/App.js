@@ -8,14 +8,18 @@ import Navigator from './systems/Navigator';
 
 // for develop 
 import TestPage from './pages/Test/TestPage';
+import { GlobalContextProvider } from './systems/useGlobalContext';
 
 
 export default function App() {
 	const SystemContext = React.createContext(SystemContext);
 	return (
 		<NavigationContainer>
-			<Navigator debug={true}/>
+			<GlobalContextProvider>
+				<Navigator debug={true} />
+			</GlobalContextProvider>
 		</NavigationContainer>
+
 	);
 }
 
