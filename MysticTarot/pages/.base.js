@@ -8,11 +8,13 @@ import { useNavigation } from '@react-navigation/native';
 // files
 import {pageList, pageNames} from "../../systems/Page";
 import * as PageModule from "../../systems/PageModule";
+import useGlobalContext from '../../systems/useGlobalContext';
 
 //useContext();
 
 export default function Base() {
 	const navigation = useNavigation();
+	const global = useGlobalContext();
 
 	return (
 		<View>

@@ -16,13 +16,6 @@ import TestPage from '../pages/Test/TestPage';
 
 const Stack = createStackNavigator();
 
-
-const TestNavigator = () => {
-	<>
-
-	</>
-}
-
 const Navigator = (props) => (
 	<>
 		<Stack.Navigator>
