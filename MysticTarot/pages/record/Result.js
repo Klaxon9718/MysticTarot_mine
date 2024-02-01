@@ -2,24 +2,20 @@
 // system
 import * as React from 'react';
 import { Text, View, Button } from 'react-native';
-//import Container from "../component/Container";
-
+import { useNavigation } from '@react-navigation/native';
+//import Container from "../component/Container"
 
 // files
-import { PageChangeButton, pageNames } from '../../systems/PageList';
+import {allPageList, pageNames} from "../../systems/Page";
+import * as PageModule from "../../modules/PageModule";
 
-//useContext();
-
-export default function Result({navigation}) {
+export default function Result() {
+	const navigation = useNavigation();
 	return (
 		<View>
 			<Text>Result</Text>
-			<Button
-				title={`초기화면으로 (네비게이션 초기화)`}
-				onPress={() => {
-					console.log("hello");
-				}}
-			/>
+			<PageModule.PageBackButton	/>
+			<PageModule.HomeButton />
 		</View>
 	);
 }

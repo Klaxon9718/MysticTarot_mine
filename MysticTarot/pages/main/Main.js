@@ -2,13 +2,15 @@
 // system
 import react from 'react';
 import { Text, View, Button } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 //import Container from "../component/Container";
 
 // files
 //import { NavigationContainer } from "@react-navigation/native";
 //import { createStackNavigator } from "@react-navigation/stack";
 
-export default function Main({ navigation }) {
+export default function Main() {
+	const navigation = useNavigation();
 	return (
 		<View>
 			<Text>Main</Text>

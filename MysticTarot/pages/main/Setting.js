@@ -5,7 +5,8 @@ import { Text, View, Button } from 'react-native';
 //import Container from "../component/Container";
 
 // files
-
+import {allPageList, pageNames} from "../../systems/Page";
+import * as PageModule from "../../modules/PageModule";
 //useContext();
 
 export default function Setting() {
