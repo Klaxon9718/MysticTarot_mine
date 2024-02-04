@@ -7,6 +7,7 @@ import * as PageModule from "../../modules/PageModule";
 
 export default function TestPage() {
 	const navigation = useNavigation();
+	
 	// console.log('flatList function');
 	return (
 		<View>
