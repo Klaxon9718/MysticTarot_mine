@@ -6,13 +6,19 @@ import { useNavigation } from '@react-navigation/native';
 //import Container from "../component/Container";
 
 // files
-import {allPageList, pageNames} from "../../systems/Page";
+import { allPageList, pageNames } from "../../systems/Page";
 import * as PageModule from "../../modules/PageModule";
+import useGlobalContext from '../../systems/useGlobalContext';
 
 //useContext();
 
 export default function SelectCard() {
 	const navigation = useNavigation();
+
+	const global = useGlobalContext();
+	const [data,setData] = global.dataState;
+	setData("selectCard");
+	
 	return (
 		<View>
 			<Text>카드 선택</Text>
