@@ -1,19 +1,19 @@
 // pages/main/Thumbnail.js
 import * as React from 'react';
 import { Text, View, Button } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
-import { PageChangeButton, pageNames } from '../../systems/PageList';
+import { pageNames } from "../../systems/Page";
+import * as PageModule from "../../modules/PageModule";
 
-export default function Thumbnail({navigation}) {
+export default function Thumbnail() {
+	const navigation = useNavigation();
 	return (
 		<View>
 			<Text>Thumbnail</Text>
-			<PageChangeButton
-				navigation={navigation}
-				title={'실 동작테스트'}
+			<PageModule.PageChangeButton
 				name={pageNames.Home.name}
 			/>
-
 		</View>
 	);
 }
