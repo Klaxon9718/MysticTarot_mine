@@ -1,0 +1,34 @@
+{
+	"spread": [
+		{
+			"id": 1,
+			"name": "원카드",
+			"content": "미래를 예측하고 심리적인 깊이를 나타냅니다.",
+			"image": "https://github.com/poro912/MysticTarot/blob/release/MysticTarot/pages/store/img/back-blue-card.png"
+		},
+		{
+			"id": 2,
+			"name": "3카드",
+			"content": "간단하면서도 실용적인 타로 점",
+			"image": "https://github.com/poro912/MysticTarot/blob/release/MysticTarot/pages/store/img/back-blue-card.png"
+		},
+		{
+			"id": 3,
+			"name": "5카드",
+			"content": "미래를 예측하고 상담",
+			"image": "https://github.com/poro912/MysticTarot/blob/release/MysticTarot/pages/store/img/back-blue-card.png"
+		},
+		{
+			"id": 4,
+			"name": "상점",
+			"content": "스프레드 구매하기",
+			"image": "https://github.com/poro912/MysticTarot/blob/release/MysticTarot/pages/store/img/back-blue-card.png"
+		},
+		{
+			"id": 4,
+			"name": "상점",
+			"content": "스프레드 구매하기",
+			"image": "https://github.com/poro912/MysticTarot/blob/release/MysticTarot/pages/store/img/back-blue-card.png"
+		}
+	]
+}
