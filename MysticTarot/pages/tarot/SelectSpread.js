@@ -48,6 +48,7 @@ export default function SelectSpread() {
 			onPress={() => console.log(`Clicked on ${item.name}` + `${item.image}`)}>
 			
 			<View style={styles.spreadContentContainer}>
+				{/* 스프레드 이미지 처리 관련 코드*/}
 				<Image source={{uri: item.image}} style={styles.spreadImage} />
 				<Text style={styles.spreadName}>{item.name}</Text>
 				<Text style={styles.spreadContent}>{item.content}</Text>
